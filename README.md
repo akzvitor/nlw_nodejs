@@ -2,6 +2,17 @@
 
 A real-time voting system where users can create a poll and other users can cast their votes. The system generates a ranking among the options and updates the votes in real-time.
 
+## Tools and Technologies
+
+- Typescript
+- Node.js
+- Fastify
+- Websockets
+- Docker
+- PostgreSQL
+- Redis
+- Prisma ORM
+
 ## Requisites
 
 - Docker;
