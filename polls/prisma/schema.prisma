@@ -7,6 +7,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// Creating tables
+
 model Poll {
   id        String   @id @default(uuid())
   title     String
@@ -36,5 +38,6 @@ model Vote {
   pollOption PollOption @relation(fields: [pollOptionId], references: [id])
   poll       Poll       @relation(fields: [pollId], references: [id])
 
+  // An user (with his sessionId) can only vote once on a poll (referenced by the pollId)
   @@unique([sessionId, pollId])
 }
